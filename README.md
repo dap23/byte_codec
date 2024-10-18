@@ -1,6 +1,6 @@
-# Byte Decoder
+# Byte Codec
 
-A simple Python Library for decoding bytes into various data types.
+A simple Python Library for encoding and decoding various data types to and from bytes.
 
 ## Installation
 
@@ -11,25 +11,24 @@ pip install byte-decoder
 ## Usage
 
 ```python
-from byte_decoder import ByteDecoder
+from byte_codec import ByteCodec
 
-decoder = ByteDecoder()
+codec = ByteCodec()
 
-# Decode to integer
-int_value = decoder.decode_to_int(b'\x00\0f')
-print(int_value) # output: 15
+# Encoding
+int_bytes = codec.encode_from_int(12345)
+string_bytes = codec.encode_from_string("Hello, World!")
+float_bytes = codec.encode_from_float(3.14159)
+list_bytes = codec.encode_from_list([b'\x01\x02', b'\x03\x04'])
 
-# Decode to string
-string_value = decoder.decode_to_string(b'Hello')
-print(string_value)  # Output: 'Hello'
+# Decoding
+int_value = codec.decode_to_int(int_bytes)
+string_value = codec.decode_to_string(string_bytes)
+float_value = codec.decode_to_float(float_bytes)
+list_value = codec.decode_to_list(list_bytes, 2)
 
-# Decode to float
-float_value = decoder.decode_to_float(b'@I\x0f\xdb')
-print(float_value)  # Output: 3.14159
-
-# Decode to list
-list_value = decoder.decode_to_list(b'\x01\x02\x03\x04', 2)
-print(list_value)  # Output: [b'\x01\x02', b'\x03\x04']
+# Generic encoding
+any_bytes = codec.encode_from_any(12345)  # Works with int, str, float, list, or bytes
 ```
 
 ## License
