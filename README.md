@@ -5,7 +5,7 @@ A simple Python Library for encoding and decoding various data types to and from
 ## Installation
 
 ```bash
-pip install byte-decoder
+pip install byte-codec
 ```
 
 ## Usage
