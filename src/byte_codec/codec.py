@@ -6,7 +6,7 @@ class ByteCodec:
         pass
 
     def decode_to_int(self, byte_data: bytes) -> int:
-        return int.from_bytes(byte_data, byteorder="big")
+        return int.from_bytes(byte_data, byteorder="big")  # expected int
 
     def decode_to_string(self, byte_data: bytes, encoding: str = "utf-8") -> str:
         return byte_data.decode(encoding)

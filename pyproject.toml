@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "byte_codec"
-version = "0.1.3"
-description = "A simple Python library for decoding bytes"
+version = "0.1.4"
+description = "A simple Python library for encoding and decoding bytes"
 readme = "README.md"
 authors = [{ name = "Muhammad Daffa", email = "mdaffa2301@gmail.com" }]
 license = { file = "LICENSE" }
