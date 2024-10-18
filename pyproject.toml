@@ -23,3 +23,7 @@ Homepage = "https://github.com/dap23/byte_decoder"
 
 [project.optional-dependencies]
 dev = ["pytest"]
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+pythonpath = ["src"]
